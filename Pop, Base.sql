@@ -1,0 +1,185 @@
+USE CarpoolingTEC;
+
+INSERT INTO Autos(PLACA, MARCA, MODELO, CAPACIDAD)
+VALUES('BCM-087','TOYOTA','FORTUNER',7); 
+
+INSERT INTO Autos(PLACA, MARCA, MODELO, CAPACIDAD)
+VALUES('BFF-068','NISSAN','FRONTIER',5); 
+
+INSERT INTO Autos(PLACA, MARCA, MODELO, CAPACIDAD)
+VALUES('BSH-465','ISUZU','D-MAX',5); 
+
+-- SELECT * FROM Autos;
+
+
+
+INSERT INTO Categorias(NOMBRE, PUNTOSPORVIAJE, PUNTOSPORCATEGORIA)
+VALUES('AMATEUR',10,30); 
+
+INSERT INTO Categorias(NOMBRE, PUNTOSPORVIAJE, PUNTOSPORCATEGORIA)
+VALUES('BRONCE',20,40); 
+
+INSERT INTO Categorias(NOMBRE, PUNTOSPORVIAJE, PUNTOSPORCATEGORIA)
+VALUES('PLATA',30,50); 
+
+INSERT INTO Categorias(NOMBRE, PUNTOSPORVIAJE, PUNTOSPORCATEGORIA)
+VALUES('ORO',40,60);
+
+-- SELECT * FROM Categorias;
+
+
+
+
+INSERT INTO Fechas(DIA, MES, ANO)
+VALUES(28,05,2019);
+
+INSERT INTO Fechas(DIA, MES, ANO)
+VALUES(06,06,2019);
+
+INSERT INTO Fechas(DIA, MES, ANO)
+VALUES(12,06,2019);
+
+-- SELECT * FROM Fechas;
+
+
+
+
+INSERT INTO Parqueos(NUMEROPARQUEO, ACTIVO)
+VALUES('A-01', TRUE); 
+
+INSERT INTO Parqueos(NUMEROPARQUEO, ACTIVO)
+VALUES('B-08', FALSE); 
+
+INSERT INTO Parqueos(NUMEROPARQUEO, ACTIVO)
+VALUES('C-05', TRUE); 
+
+INSERT INTO Parqueos(NUMEROPARQUEO, ACTIVO)
+VALUES('B-02', FALSE); 
+
+INSERT INTO Parqueos(NUMEROPARQUEO, ACTIVO)
+VALUES('A-02', TRUE); 
+
+-- SELECT * FROM Parqueos;
+
+
+
+
+INSERT INTO Productos(NOMBRE, COSTO)
+VALUES('GORRA TEC',5000);
+
+INSERT INTO Productos(NOMBRE, COSTO)
+VALUES('SOMBRILLA TEC',2500);
+
+INSERT INTO Productos(NOMBRE, COSTO)
+VALUES('VASO TEC',3000);
+
+-- SELECT * FROM Productos;
+
+
+
+
+INSERT INTO Pasajeros(CEDULA, NOMBRE, APELLIDO, CORREO, IdCategoria, PUNTOS, CONTRASENA, ACTIVO)
+VALUES(604410064,'Hernaldo','Ramirez','nano_12_rm@gmail.com',2,100,'Nano123', TRUE); 
+
+INSERT INTO Pasajeros(CEDULA, NOMBRE, APELLIDO, CORREO, IdCategoria, PUNTOS, CONTRASENA, ACTIVO)
+VALUES(204560876,'Gerardo','Zeledon','mecace@gmail.com',1,50,'Gato123', TRUE); 
+
+INSERT INTO Pasajeros(CEDULA, NOMBRE, APELLIDO, CORREO, IdCategoria, PUNTOS, CONTRASENA, ACTIVO)
+VALUES(607430723,'Juan','Esquivel','juanesro@gmail.com',4,250,'Gatito123', TRUE); 
+
+INSERT INTO Pasajeros(CEDULA, NOMBRE, APELLIDO, CORREO, IdCategoria, PUNTOS, CONTRASENA, ACTIVO)
+VALUES(605470765,'Crisptofer','Fernandez','crisfer@gmail.com',3,185,'Perro123', TRUE); 
+
+INSERT INTO Pasajeros(CEDULA, NOMBRE, APELLIDO, CORREO, IdCategoria, PUNTOS, CONTRASENA, ACTIVO)
+VALUES(503650826,'Mario','Molina','marmol@gmail.com',4,40,'Elcrack12', FALSE); 
+-- SELECT * FROM Pasajero;
+
+
+INSERT INTO Amigos(IdEmisor, IdReceptor, AMIGO)
+VALUES(1,2,TRUE);
+
+INSERT INTO Amigos(IdEmisor, IdReceptor, AMIGO)
+VALUES(1,3,TRUE);
+
+INSERT INTO Amigos(IdEmisor, IdReceptor, AMIGO)
+VALUES(1,4,FALSE);
+
+INSERT INTO Amigos(IdEmisor, IdReceptor, AMIGO)
+VALUES(3,1,FALSE);
+
+INSERT INTO Amigos(IdEmisor, IdReceptor, AMIGO)
+VALUES(3,2,TRUE);
+
+-- SELECT * FROM Amigos;
+
+
+
+INSERT INTO Administradors(IdPasajero)
+VALUES(1); 
+
+INSERT INTO Administradors(IdPasajero)
+VALUES(3); 
+
+-- SELECT * FROM Administradors;
+
+
+
+
+INSERT INTO Chofers(IdPasajerof, IdAutof)
+VALUES(1,3); 
+
+INSERT INTO Chofers(IdPasajerof, IdAutof)
+VALUES(3,2); 
+
+-- SELECT * FROM Chofers;
+
+
+
+
+INSERT INTO Compras(IdPasajeroFC, IdProductoFC, DETALLE, IdFechaFC)
+VALUES(3,2, 'Compra de producto en X-ASETEC', 1); 
+
+INSERT INTO Compras(IdPasajeroFC, IdProductoFC, DETALLE, IdFechaFC)
+VALUES(1,1,'Compra en X-Toño Carrito', 2); 
+
+INSERT INTO Compras(IdPasajeroFC, IdProductoFC, DETALLE, IdFechaFC)
+VALUES(3,3,'Compra en X-ASETEC', 2); 
+
+-- SELECT * FROM Compras;
+
+
+
+
+INSERT INTO Viajes(IdChoferFV, IdAutoFV, IdFechaFV, IdParqueoFV, ACTIVO)
+VALUES(1, 3, 2, 2, TRUE); 
+
+INSERT INTO Viajes(IdChoferFV, IdAutoFV, IdFechaFV, IdParqueoFV, ACTIVO)
+VALUES(2, 2, 1, 4, FALSE); 
+
+INSERT INTO Viajes(IdChoferFV, IdAutoFV, IdFechaFV, IdParqueoFV, ACTIVO)
+VALUES(1, 3, 1, 3, FALSE); 
+
+-- SELECT * FROM Viajes;
+
+
+
+
+INSERT INTO ParticipanteViajes(IdPasajeroFP, IdViajeFP, CODIGOVIAJE)
+VALUES(1,1, 'CDMX12'); 
+
+INSERT INTO ParticipanteViajes(IdPasajeroFP, IdViajeFP, CODIGOVIAJE)
+VALUES(2,1, 'CDMX12-1'); 
+
+INSERT INTO ParticipanteViajes(IdPasajeroFP, IdViajeFP, CODIGOVIAJE)
+VALUES(4,1, 'CDMX12-2'); 
+
+INSERT INTO ParticipanteViajes(IdPasajeroFP, IdViajeFP, CODIGOVIAJE)
+VALUES(3,2, 'CPC02'); 
+
+INSERT INTO ParticipanteViajes(IdPasajeroFP, IdViajeFP, CODIGOVIAJE)
+VALUES(2,2, 'CPC02-1'); 
+
+INSERT INTO ParticipanteViajes(IdPasajeroFP, IdViajeFP, CODIGOVIAJE)
+VALUES(4,2, 'CPC02-2'); 
+
+-- SELECT * FROM ParticipanteViajes;
