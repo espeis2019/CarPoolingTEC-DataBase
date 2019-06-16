@@ -2,7 +2,7 @@ CREATE DATABASE CarpoolingTEC;
 
 drop database CarpoolingTEC;
 
-USE CarpoolingTEC;
+USE csx48i21toab0xq1;
 
 
 CREATE TABLE Categorias(
@@ -14,10 +14,10 @@ CREATE TABLE Categorias(
 );
 
 
-
 CREATE TABLE Pasajeros(
 	IdPasajero INT NOT NULL AUTO_INCREMENT,
 	CEDULA INT NOT NULL,
+    CARNET INT NOT NULL,
     NOMBRE VARCHAR(50) NOT NULL,
     APELLIDO VARCHAR(50) NOT NULL,
     CORREO VARCHAR(50) NOT NULL,
@@ -186,3 +186,10 @@ FOREIGN KEY(IdReceptor) REFERENCES Pasajeros(IdPasajero);
 ALTER TABLE Amigos
 ADD CONSTRAINT IdEmisor 
 FOREIGN KEY(IdEmisor) REFERENCES Pasajeros(IdPasajero);
+
+
+
+CREATE TABLE Validaciones(
+CARNET INT NOT NULL,
+PRIMARY KEY(CARNET)
+);

@@ -1,4 +1,4 @@
-USE CarpoolingTEC;
+USE csx48i21toab0xq1;
 
 INSERT INTO Autos(PLACA, MARCA, MODELO, CAPACIDAD)
 VALUES('BCM-087','TOYOTA','FORTUNER',7); 
@@ -77,21 +77,20 @@ VALUES('VASO TEC',3000);
 
 
 
+INSERT INTO Pasajeros(CEDULA, CARNET, NOMBRE, APELLIDO, CORREO, IdCategoria, PUNTOS, CONTRASENA, ACTIVO)
+VALUES(604410064, 2016081117,'Hernaldo','Ramirez','nano_12_rm@gmail.com',2,100,'Nano123', TRUE); 
 
-INSERT INTO Pasajeros(CEDULA, NOMBRE, APELLIDO, CORREO, IdCategoria, PUNTOS, CONTRASENA, ACTIVO)
-VALUES(604410064,'Hernaldo','Ramirez','nano_12_rm@gmail.com',2,100,'Nano123', TRUE); 
+INSERT INTO Pasajeros(CEDULA, CARNET, NOMBRE, APELLIDO, CORREO, IdCategoria, PUNTOS, CONTRASENA, ACTIVO)
+VALUES(204560876, 2016243863,'Gerardo','Zeledon','mecace@gmail.com',1,50,'Gato123', TRUE); 
 
-INSERT INTO Pasajeros(CEDULA, NOMBRE, APELLIDO, CORREO, IdCategoria, PUNTOS, CONTRASENA, ACTIVO)
-VALUES(204560876,'Gerardo','Zeledon','mecace@gmail.com',1,50,'Gato123', TRUE); 
+INSERT INTO Pasajeros(CEDULA, CARNET, NOMBRE, APELLIDO, CORREO, IdCategoria, PUNTOS, CONTRASENA, ACTIVO)
+VALUES(607430723, 2016167796,'Juan','Esquivel','juanesro@gmail.com',4,250,'Gatito123', TRUE); 
 
-INSERT INTO Pasajeros(CEDULA, NOMBRE, APELLIDO, CORREO, IdCategoria, PUNTOS, CONTRASENA, ACTIVO)
-VALUES(607430723,'Juan','Esquivel','juanesro@gmail.com',4,250,'Gatito123', TRUE); 
+INSERT INTO Pasajeros(CEDULA, CARNET, NOMBRE, APELLIDO, CORREO, IdCategoria, PUNTOS, CONTRASENA, ACTIVO)
+VALUES(605470765, 2016048367,'Crisptofer','Fernandez','crisfer@gmail.com',3,185,'Perro123', TRUE); 
 
-INSERT INTO Pasajeros(CEDULA, NOMBRE, APELLIDO, CORREO, IdCategoria, PUNTOS, CONTRASENA, ACTIVO)
-VALUES(605470765,'Crisptofer','Fernandez','crisfer@gmail.com',3,185,'Perro123', TRUE); 
-
-INSERT INTO Pasajeros(CEDULA, NOMBRE, APELLIDO, CORREO, IdCategoria, PUNTOS, CONTRASENA, ACTIVO)
-VALUES(503650826,'Mario','Molina','marmol@gmail.com',4,40,'Elcrack12', FALSE); 
+INSERT INTO Pasajeros(CEDULA, CARNET, NOMBRE, APELLIDO, CORREO, IdCategoria, PUNTOS, CONTRASENA, ACTIVO)
+VALUES(503650826, 200955696,'Mario','Molina','marmol@gmail.com',4,40,'Elcrack12', FALSE); 
 -- SELECT * FROM Pasajero;
 
 
@@ -183,3 +182,21 @@ INSERT INTO ParticipanteViajes(IdPasajeroFP, IdViajeFP, CODIGOVIAJE)
 VALUES(4,2, 'CPC02-2'); 
 
 -- SELECT * FROM ParticipanteViajes;
+
+
+INSERT INTO Validaciones(Carnet)
+VALUES(2016081117); 
+
+INSERT INTO Validaciones(Carnet)
+VALUES(2016243863); 
+
+INSERT INTO Validaciones(Carnet)
+VALUES(2016167796); 
+
+INSERT INTO Validaciones(Carnet)
+VALUES(2016048367); 
+
+INSERT INTO Validaciones(Carnet)
+VALUES(200955696); 
+
+-- SELECT * FROM Validaciones;
