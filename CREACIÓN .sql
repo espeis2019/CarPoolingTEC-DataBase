@@ -33,6 +33,7 @@ CREATE TABLE Amigos(
 	IdReceptor INT NOT NULL,
     IdEmisor INT NOT NULL,
     AMIGO BOOLEAN, 
+    IdAmigo INT NOT NULL AUTO_INCREMENT UNIQUE,
     PRIMARY KEY(IdReceptor, IdEmisor)
 );
 

@@ -200,3 +200,4 @@ INSERT INTO Validaciones(Carnet)
 VALUES(200955696); 
 
 -- SELECT * FROM Validaciones;
+
