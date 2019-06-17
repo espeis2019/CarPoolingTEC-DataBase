@@ -9,7 +9,8 @@ CREATE TABLE Categorias(
 	IdCategoria INT NOT NULL AUTO_INCREMENT,
     NOMBRE VARCHAR(100) NOT NULL,
     PUNTOSPORVIAJE INT NOT NULL,
-    PUNTOSPORCATEGORIA INT NOT NULL,
+    VMAXIMOSCATEGORIA INT NOT NULL,
+    VMINIMOSCATEGORIA INT NOT NULL,
     PRIMARY KEY(IdCategoria)
 );
 
@@ -45,6 +46,7 @@ CREATE TABLE Autos(
     MARCA VARCHAR(100) NOT NULL,
     MODELO VARCHAR(100) NOT NULL,
     CAPACIDAD INT NOT NULL,
+    IdChofer INT NOT NULL,
     PRIMARY KEY (IdAuto)
 );
 
@@ -57,7 +59,6 @@ CREATE TABLE Administradors(
 CREATE TABLE Chofers(                                              
 	IdChofer INT NOT NULL AUTO_INCREMENT,
     IdPasajerof INT NOT NULL,
-    IdAutof INT NOT NULL,
     PRIMARY KEY(IdChofer)
 );
 
@@ -128,14 +129,15 @@ FOREIGN KEY(IdPasajero) REFERENCES Pasajeros(IdPasajero);
 
 
 
-ALTER TABLE Chofers
-ADD CONSTRAINT IdAutof 
-FOREIGN KEY(IdAutof) REFERENCES Autos(IdAuto);
 
 ALTER TABLE Chofers
 ADD CONSTRAINT IdPasajerof 
 FOREIGN KEY(IdPasajerof) REFERENCES Pasajeros(IdPasajero);
 
+
+ALTER TABLE Autos
+ADD CONSTRAINT IdChofer 
+FOREIGN KEY(IdChofer) REFERENCES Chofers(IdChofer);
 
 
 ALTER TABLE Compras
